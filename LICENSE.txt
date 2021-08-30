@@ -1,0 +1,29 @@
+Tenshnova License
+
+Copyright (c) 2021. Yufenyuy Veyeh Didier <tenshnova@gmail.com>, Tenshnova.
+
+Permission and rights to use (MODIFY or UPDATE or CHANGE) this software and its 
+associated documentation files is restricted, but maybe granted upon a prior expressed 
+permission from its author and/or Tenshnova through (tenshnova@gmail.com).  
+You can also contact Tenshnova through (https://www.tenshnova.com/).
+
+If granted the permission and rights to use this software, the following conditions should apply:
+
+    -- The ".tenshnova" file shall be left intact and with no modification of any sort except
+        by its author and/or Tenshnova.
+    -- Any addition made to this file in particular should be done within the "=====" lines below
+        while keeping every content that is already in this file.
+
+
+=====================
+
+=====================
+
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
