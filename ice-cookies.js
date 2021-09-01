@@ -1,8 +1,8 @@
 // --- Config --- //
-var iceCookiesTitle = "iceCookies" // Title
-var iceCookiesDesc = "We use cookies to ensure you get the best user experience on our website. By continuing to use this site, you agree to the use of these cookies." // Description
+var iceCookiesTitle = 'iceCookies' // Title
+var iceCookiesDesc = 'We use cookies to ensure you get the best user experience on our website. By continuing to use this site, you agree to the use of these cookies.' // Description
 var iceCookiesLink = '<a href="https://www.unicsgroup.com/privacy-policy" target="_blank">Know more</a>' // Policy link
-var iceCookiesBtn = "Agree" // Button text
+var iceCookiesBtn = 'Agree' // Button text
 
 /**
  * The fade effect for the `icecookies-container` element.
@@ -16,29 +16,32 @@ var iceCookiesFade = (flow, id, disp = 'block') => {
     let e = document.getElementById(id)
     switch (flow) {
         case 'in':
+            // eslint-disable-next-line semi
             e.style.opacity = 0;
             e.style.display = disp;
             (function fade() {
                 /** The `opacity` css property value. */
                 let o = parseFloat(e.style.opacity)
                 if (!((o += 0.02) > 1)) {
+                    // eslint-disable-next-line semi
                     e.style.opacity = o;
                     requestAnimationFrame(fade)
                 }
             })()
-            break;
+            break
         case 'out':
             e.style.opacity = 1;
             (function fade() {
                 if ((e.style.opacity -= 0.02) < 0) {
+                    // eslint-disable-next-line semi
                     e.style.display = disp;
                 } else {
                     requestAnimationFrame(fade)
                 }
             })()
-            break;
+            break
         default:
-            break;
+            break
     }
 }
 
@@ -51,7 +54,7 @@ var iceCookiesFade = (flow, id, disp = 'block') => {
  */
 var iceCookiesSet = (name, value, days = 7) => {
     /** Specifies the cookie expiration. */
-    let exp = ""
+    let exp = ''
     let date = new Date()
     date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000))
     exp = date.toUTCString()
