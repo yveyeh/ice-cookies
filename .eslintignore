@@ -1,0 +1,5 @@
+# Allowlist 'settings.json' in the '.vscode' folder.
+# But do not allow anything else in the '.vscode' folder to be linted.
+!.vscode
+.vscode/*
+!.vscode/settings.json
