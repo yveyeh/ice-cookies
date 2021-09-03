@@ -1,5 +1,5 @@
 import { Options } from './interface/options'
-import { setAttributes } from './utils'
+import { setAttributes } from './util'
 
 
 const iceCookies = (options: Options): void => {
