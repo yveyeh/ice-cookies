@@ -4,7 +4,8 @@
     "description": "A light, fast, optimal, and customizable cookie consent plugin.",
     "main": "ice-cookies.js",
     "scripts": {
-        "test": "test"
+        "test": "test",
+        "build": "gulp"
     },
     "repository": {
         "type": "git",

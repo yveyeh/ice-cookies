@@ -22,17 +22,26 @@
             4,
             {
                 "SwitchCase": 1,
-                "ignoredNodes": ["ConditionalExpression"]
+                "ignoredNodes": [
+                    "ConditionalExpression",
+                    "flatTernaryExpressions"
+                ]
             }
         ],
-        // "linebreak-style": ["error", process.platform === "win32" ? "windows" : "unix"],
-
+        "no-console": "off",
+        "linebreak-style": "off", //["error", process.platform === "win32" ? "windows" : "unix"],
+        "no-use-before-define": [
+            "error",
+            {
+                "variables": true
+            }
+        ],
         "quotes": [
             "error",
             "single"
         ],
         "semi": [
-            "error",
+            "warn",
             "never"
         ]
     }
