@@ -5,26 +5,26 @@ import { setAttributes } from './util'
 const iceCookies = (options: Options): void => {
 
     /**The title of the cookie consent. */
-    const ice_title = options.title ? options.title : 'iceCookies'
+    const ic_title: string = options.title ? options.title : 'iceCookies'
     /**The description of the cookie consent. */
-    const ice_desc = options.description
+    const ic_desc: string = options.description
     /**The `optional` cookie policy link of the cookie consent. */
-    const ice_link = `<a href="${options.link ? options.link.href : 'javascript:void(0)'}" target="_blank">${options.link ? options.link.text : ''}</a>`
+    const ic_link = `<a href="${options.link ? options.link.href : 'javascript:void(0)'}" target="_blank">${options.link ? options.link.text : ''}</a>`
     /**The button text of the cookie consent. */
-    const ice_btn = options.button.text
+    const ic_btn: string = options.button.text
     /**The duration of the cookie consent cookie. */
-    const ice_days = options.duration
+    const ic_days: number | undefined = options.duration
 
 
     /**
-     * The fade effect for the `icecookies-container` element.
+     * The fade effect for the `ic-box` element.
      * @param flow - The z-plane direction of the fade effect.
      * @param disp - The `display` css property value.
      * @returns void
      */
     const iceCookiesFade = (flow: string, disp: string): void => {
         /** The targeted `html element`. */
-        const e = document.getElementById('icecookies-container')
+        const e = document.getElementById('ic-box')
         if (e) {
             switch (flow) {
                 case 'in':
@@ -90,7 +90,7 @@ const iceCookies = (options: Options): void => {
      * @returns void
      */
     const iceCookiesDismiss = (): void => {
-        iceCookiesSet('iceCookies', 'Consent@tenshnova-iceCookies-plugin', ice_days)
+        iceCookiesSet('iceCookies', 'Consent@tenshnova-ice-cookies-plugin', ic_days)
         iceCookiesFade('out', 'none')
     }
 
@@ -100,20 +100,19 @@ const iceCookies = (options: Options): void => {
      */
     const iceCookiesInit = (): void => {
         if (iceCookiesGet('iceCookies') == ' ') {
-            const ice_cookie_cont = document.createElement('div')
-            setAttributes(ice_cookie_cont, { 'class': 'icecookies-container', 'id': 'icecookies-container' })
-            ice_cookie_cont.innerHTML = `
-            <div class="icecookies-title">
-                <a>${ice_title}</a>
+            const ic_box = document.createElement('div')
+            setAttributes(ic_box, { 'class': 'ic-box', 'id': 'ic-box' })
+            ic_box.innerHTML = `
+            <div class="ic-title">
+                <a>${ic_title}</a>
             </div>
-            <div class="icecookies-desc">
-                <p>${ice_desc} ${ice_link}</p>
+            <div class="ic-desc">
+                <p>${ic_desc} ${ic_link}</p>
             </div>
-            <div class="icecookies-btn pull-end">
-                <a onclick="iceCookiesDismiss()">${ice_btn}</a>
-            </div>
-        `
-            document.body.appendChild(ice_cookie_cont)
+            <div class="ic-btn pull-end">
+                <a onclick="iceCookiesDismiss()">${ic_btn}</a>
+            </div>`
+            document.body.appendChild(ic_box)
             iceCookiesFade('in', 'block')
         }
     }

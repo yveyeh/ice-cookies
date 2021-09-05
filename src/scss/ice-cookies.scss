@@ -1,0 +1,93 @@
+/* Standard variables and values*/
+$btn-bg: #000;
+$btn-hbg: #23a455;
+$box-bg: #333;
+$color: #fff;
+$font-family: "Futura", OpenSans, arial, "sans-serif";
+
+@import "includes/common.scss";
+@import "includes/transition.scss";
+
+.ic-box {
+    display: none;
+    z-index: 9999;
+    overflow: hidden;
+    position: fixed;
+    bottom: 1.875rem;
+    right: 1.875rem;
+    width: 21.875rem;
+    min-height: 1.25rem;
+    box-sizing: border-box;
+    padding: 1.875rem;
+    background: $box-bg;
+}
+
+.ic-box {
+    .ic-title {
+        a {
+            @include title-desc-common(default, block, 1.25rem, $color, 1.375rem, inherit, $font-family);
+            &:hover {
+                cursor: default;
+                color: $color;
+            }
+        }
+    }
+}
+
+.ic-box {
+    .ic-desc {
+        p {
+            @include title-desc-common(default, block, 1.25rem, $color, 1rem, inherit, $font-family);
+            margin: 0.725rem 0 0.25rem;
+            padding: 0;
+        }
+    }
+}
+
+.ic-box {
+    .ic-desc {
+        a {
+            text-decoration: underline;
+            color: $color;
+            font-family: $font-family;
+        }
+    }
+}
+
+.ic-box {
+    .ic-btn {
+        a {
+            @include title-desc-common(pointer, inline-block, unset, $color, 1rem, bold, $font-family);
+            text-align: center;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            box-sizing: border-box;
+            background: $btn-bg;
+            @include transition(background 0.3s);
+
+            &:hover {
+                color: $color;
+                background: $btn-hbg;
+            }
+        }
+    }
+}
+
+
+/* @media queries */
+
+@media (max-width: 980px) {
+
+    .ic-box {
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+    }
+
+}
+
+/* quick utilities */
+
+.pull-end {
+    float: right !important;
+}

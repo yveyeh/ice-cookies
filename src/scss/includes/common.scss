@@ -1,0 +1,11 @@
+@mixin title-desc-common($cursor, $display, $lheight, $color, $fsize, $fweight, $ffamily) {
+    cursor: $cursor;
+    display: $display;
+    line-height: $lheight;
+    color: $color;
+    font: {
+        size: $fsize;
+        weight: $fweight;
+        family: $ffamily;
+    }
+}
