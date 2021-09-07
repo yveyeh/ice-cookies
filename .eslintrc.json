@@ -30,7 +30,7 @@
         ],
         "@typescript-eslint/no-var-requires": 0,
         "no-console": "off",
-        "linebreak-style": "off", //["error", process.platform === "win32" ? "windows" : "unix"],
+        "linebreak-style": "off", //? JS :: ["error", process.platform === "win32" ? "windows" : "unix"],
         "no-use-before-define": [
             "error",
             {
